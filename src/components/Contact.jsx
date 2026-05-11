@@ -1,6 +1,17 @@
 import React from 'react'
+import { useEffect } from 'react';
+
+
+
+
 
 export default function Contact() {
+  useEffect(()=>{
+    console.log("mounting phase");
+    return()=>{
+      console.log("unmounting phase");
+    }
+  }, [])
   return (
     <>
     <div className='container-fluid text-center bg-danger p-4'>

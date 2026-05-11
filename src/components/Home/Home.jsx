@@ -1,9 +1,9 @@
 import React from "react"
-import { useState } from "react"
-
+import { useEffect , useState } from "react"
+import './Home.css'
 
 export default function Home(){
-    let [count, setCount] = useState(0)
+    let [count, setCount] = useState(10)
     let increaseCount = () => {
         setCount(count + 1)
     }
@@ -15,11 +15,24 @@ export default function Home(){
     let changName = ()=>{
         setName("Maher")
     }
+ 
+
+    useEffect(()=>{
+        
+            console.log("updating phase");
+       
+    }, [ count])
+    
+
+ 
+
+
+
     return(
         <>
         <div className="container-fluid text-center bg-warning p-4">
 
-            <h1>Home</h1>
+            <h1 className= 'test'>Home</h1>
             <h3>{name}</h3>
             <button onClick={changName} className="btn btn-primary" >Change</button>
             <h1>{count}</h1>

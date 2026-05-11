@@ -2,7 +2,7 @@ import React from 'react'
 
 import Navbar from './Navbar'
 import Footer from './Footer'
-import Home from './Home'
+import Home from './Home/Home'
 import Contact from './Contact'
 import About from './About'
 import Products from './Products'

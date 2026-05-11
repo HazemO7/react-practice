@@ -4,7 +4,7 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import MasterLayout from './components/MasterLayout';
-import Home from './components/Home'
+import Home from './components/Home/Home';
 import Contact from './components/Contact'
 import About from './components/About'
 import Products from './components/Products'
