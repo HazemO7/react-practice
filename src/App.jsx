@@ -8,6 +8,9 @@ import Home from './components/Home/Home';
 import Contact from './components/Contact'
 import About from './components/About'
 import Products from './components/Products'
+import Project from './components/projects/Project'
+import News from './components/news/News'
+import Meals from './components/meals/Meals'
 import { RouterProvider } from 'react-router-dom'
 import { createBrowserRouter } from 'react-router-dom'
 import NotFound from './components/NotFound'
@@ -24,6 +27,13 @@ function App() {
       {path:'about', element:<About/>},
       {path:'contact', element:<Contact/>},
       {path:'prod', element:<Products/>},
+      {path:'projects', element:<Project/>,
+       children:[
+        {path:'news', element:<News/>},
+        {path:'meals', element:<Meals/>},
+       ]
+
+      },
     ]
   }
 ])
