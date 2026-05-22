@@ -13,7 +13,7 @@ export default function Contact() {
  let [users, setUsers] = useState([])
 
 let getUsers = async () => {
-    let response = await axios.get("https://jsonplaceholder.typicode.com/users")
+    let response = await axios.get("https://jsonplaceholder.typicode.com/users");
     setUsers(response.data);
  }
 
