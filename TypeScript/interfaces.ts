@@ -1,0 +1,8 @@
+export interface product{
+    id:number;
+    name:string;
+    price:number;
+    category:string;
+    onSale?:boolean;
+    sayHello?(name:string):string; 
+}
