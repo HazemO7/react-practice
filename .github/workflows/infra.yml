@@ -43,7 +43,10 @@ jobs:
 
 
       - name: Terraform Init
-        run: terraform init
+        run: |
+            cd infra
+            terraform init
+        
 
       - name: Terraform Plan
         if: ${{ inputs.action == 'plan' }}
