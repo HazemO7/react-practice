@@ -60,3 +60,5 @@ jobs:
         if: ${{ inputs.action == 'destroy' }}
         working-directory: ./infra
         run: terraform destroy -auto-approve
+
+        
