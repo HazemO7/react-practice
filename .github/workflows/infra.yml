@@ -43,19 +43,20 @@ jobs:
 
 
       - name: Terraform Init
-        run: |
-            cd infra
-            terraform init
-        
+        working-directory: ./infra
+        run: terraform init
 
       - name: Terraform Plan
         if: ${{ inputs.action == 'plan' }}
+        working-directory: ./infra
         run: terraform plan
 
       - name: Terraform Apply
         if: ${{ inputs.action == 'apply' }}
+        working-directory: ./infra
         run: terraform apply -auto-approve
 
       - name: Terraform Destroy
         if: ${{ inputs.action == 'destroy' }}
+        working-directory: ./infra
         run: terraform destroy -auto-approve
