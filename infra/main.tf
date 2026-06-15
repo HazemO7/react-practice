@@ -130,7 +130,7 @@ resource "aws_security_group" "web_sg" {
 }
 
 module "alb" {
-  source = "./modules/alb"
+  source = "./modules/ALB"
 
   alb_name          = "hazem-alb"
   vpc_id            = aws_vpc.main.id
