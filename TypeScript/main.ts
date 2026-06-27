@@ -24,3 +24,31 @@ return(`hello ${name}`);
 sayHello("John");
 
 }())
+
+//generics functions <T>
+
+
+function getData<T>(items:T[]){
+	return items
+}
+
+
+getData<string>(['hazem','hossam'])
+getData<number>([4,6,7]);
+getData<boolean>([true,false])
+
+
+
+
+// function getNames(names:string[]):string[]{
+// 	return names
+// }
+// function getNums(nums:number[]):number[]{
+// 	return nums
+// }
+
+
+// getNames(["g","h","p"])
+// getNums([5,9,7])
+
+
